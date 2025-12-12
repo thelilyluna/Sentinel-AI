@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+/* THEME VARIABLES */
+
+:root {
+  --bg: #160020;
+  --bg-card: rgba(255, 255, 255, 0.06);
+  --bg-card-hover: rgba(255, 255, 255, 0.12);
+  --border-card: rgba(168, 85, 247, 0.25);
+  --text-main: #eae0ff;
+}
+
+/* Light theme overrides */
+[data-theme="light"] {
+  --bg: #f5f0ff;
+  --bg-card: rgba(255, 255, 255, 0.95);
+  --bg-card-hover: #ffffff;
+  --border-card: rgba(168, 85, 247, 0.18);
+  --text-main: #1e0533;
+}
+
+/* GLOBAL */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg);
+  color: var(--text-main);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+}
+
+/* Background wrapper for pages */
+.bg-page {
+  background: radial-gradient(circle at top left, #3a0a4b 0, #160020 40%, #020617 100%);
+  min-height: calc(100vh - 56px);
+}
+
+/* GLASS CARDS */
+
+.glass {
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-radius: 1rem;
+  box-shadow: 0 0 18px rgba(168, 85, 247, 0.2);
+}
+
+.glass-hover {
+  transition: all 0.25s ease;
+}
+
+.glass-hover:hover {
+  background: var(--bg-card-hover);
+  box-shadow: 0 0 24px rgba(216, 180, 254, 0.28);
+  transform: translateY(-3px);
+}
+
+/* SECTION TITLE */
+
+.section-title {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 800;
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(216, 180, 254, 0.5);
+}
